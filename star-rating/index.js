@@ -1,21 +1,6 @@
 // do something!
 function StarRating($container) {
-  //   let link = document.createElement("link");
-  //   link.href = "star-rating/theme.css";
-  //   link.rel = "stylesheet";
-  //   document.querySelector("head").append(link);
-  //   document
-  //     .querySelector("head")
-  //     .insertAdjacentHTML(
-  //       "beforeEnd",
-  //       `<link href="star-rating/theme.css" rel="stylesheet" />`
-  //     );
-
-  let div = document.createElement("div");
-  div.classList.add("star-rating-container");
-  $container.appendChild(div);
-
-  console.log($container.dataset.maxRating);
+  $container.classList.add("star-rating-container");
   let starNum = $container.dataset.maxRating;
 
   let count = 0;
@@ -24,7 +9,7 @@ function StarRating($container) {
     //클래스 한번에 주는 방법 찾아보기.
     icon.classList.add("bx");
     icon.classList.add("bxs-star");
-    $container.querySelector(".star-rating-container").appendChild(icon);
+    $container.appendChild(icon);
 
     $container
       .querySelectorAll(".bx")
